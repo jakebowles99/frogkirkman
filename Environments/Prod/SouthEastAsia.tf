@@ -24,7 +24,7 @@ module "SQL_SEA" {
   name             = "mssql-sea-prod-01"
   admin            = "admin123"
   password         = "asdafevVVdcva!@&^&%&^%%&"
-  sku              = "GP_Gen5_2"
+  sku              = "GP_Gen5_8"
   size             = 5120
   create_mode      = "Replica"
   create_source_id = module.SQL_UKS.id
@@ -71,7 +71,7 @@ module "ScaleSet_SEA" {
   source              = "../../modules/ScaleSet"
   scale_set_name      = "vmsseaprod"
   zones               = ["1", "2", "3"]
-  SKU_name            = "standard_d2s_v3"
+  SKU_name            = "Standard_F4s_v2"
   publisher           = "Canonical"
   offer               = "UbuntuServer"
   image_sku           = "16.04-lts"

@@ -79,7 +79,7 @@ module "VM" {
   av_zone               = "1"
   disk_type             = "StandardSSD_LRS"
   os_disk_cache         = "ReadWrite"
-  os_disk_size          = 100
+  os_disk_size          = 128
   VM_tags               = merge({role = "WebSvr", region = "UKS"}, var.default_tags)
   location              = azurerm_resource_group.UKS.location
   rg                    = azurerm_resource_group.UKS.name

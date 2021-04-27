@@ -20,7 +20,7 @@ module "SQL_UKS" {
   name     = "mssql-uks-prod-01"
   admin    = "admin123"
   password = "asdafevVVdcva!@&^&%&^%%&"
-  sku      = "GP_Gen5_2"
+  sku      = "GP_Gen5_8"
   size     = 5120
   location = azurerm_resource_group.UKSouth.location
   rg       = azurerm_resource_group.UKSouth.name
@@ -65,7 +65,7 @@ module "ScaleSet_UKS" {
   source              = "../../modules/ScaleSet"
   scale_set_name      = "vmssuksprod"
   zones               = ["1", "2", "3"]
-  SKU_name            = "standard_d2s_v3"
+  SKU_name            = "Standard_F4s_v2"
   publisher           = "Canonical"
   offer               = "UbuntuServer"
   image_sku           = "16.04-lts"
