@@ -15,7 +15,7 @@ variable "default_tags_SEA" {
 
 resource "azurerm_resource_group" "EastAsia" {
   name     = "rg-sea-prod-01"
-  location = "eastasia"
+  location = "southeastasia"
   tags     = merge({region = "SEA"}, var.default_tags)
 }
 
